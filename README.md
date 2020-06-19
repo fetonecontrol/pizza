@@ -1,12 +1,26 @@
-# _{Application Name}_
+# _{Pizza Pizza}_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _{Lets users order custom pizzas and displays prices based upon user input}, {6-19-20}_
 
-#### By _**{List of contributors}**_
+#### By _**{Frederick Ernest}**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_{Behavior logics will set a base price for pizzas, and add cost, dependant on user selection of toppings}_
+_{Pizzas, toppings, and prices will be created with Constructors and stored in objects and arrays}_
+
+_{Behavior 1: User selects Pizza size, and initial price is tallied in bussiness logic}_
+_{User input: "Click" 14"}_
+_{Output: $12.00 is displayed}
+
+_{Behavior 2: User selects toppings, selections increase price which is stored in bussiness logic}
+_{Input: "Click" "pepperoni" "olive" "feta"}
+_{Output: Price variable is incrimented by .50c, 50c, and $1, new price is displayed}
+
+_{Behavior 3: User confirms purchase, total price is shown}_
+_{Input: "Click" confirm}_
+_{Output: Total price is $14.00}_
+
 
 ## Setup/Installation Requirements
 
