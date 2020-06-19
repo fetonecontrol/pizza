@@ -21,31 +21,32 @@ _{Behavior 3: User confirms purchase, total price is shown}_
 _{Input: "Click" confirm}_
 _{Output: Total price is $14.00}_
 
-
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Navigate your broswer to https://github.com/fetonecontrol/address-book
+* _Download the folder from this repository, and double click on the index.html file to open it in your Browser_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_OR_
+
+* _Navigate in your console to your prefered installation directory_
+* _Use the command git clone https://github.com/fetonecontrol/address-book
+* _Open any of the files in the directory in your prefered text editor for viewing/editing_
+* _Open the index.html file in your preffered browser or text editor preview function_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_{No known bugs}_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_{Contact Jason Khan <duverseaujohnny21@gmail.com> Frederick Ernest <frederick.ernest@gmail.com>}_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_{Made and edited in VScode, on a MBP running OSX10.14, the languages used were : HTML, CSS, and JavaScript. The frameworks Bootstrap and jQuery were used for styling and behavior, respectively.}_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*{Open source under the MIT licence.}*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2020 **_{Frederick Ernest && Johnny Duverseau}_**
