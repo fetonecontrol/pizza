@@ -1,3 +1,17 @@
-#story {
-  display: none;
+/* body {
+  margin: 0;
+  padding 0;
+  font-family: sans-serif;
 }
+section {
+  padding:0 100px;
+  background: url(pizza.jpg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.box {
+  position: relative;
+  max width: 600px;
+  background: rgba(255, 255, 255,.2);
+} */
