@@ -1,10 +1,10 @@
 // Business Logic for AddressBook ---------
-function AddressBook() {
-  this.contacts = [];
+function pizzaBook() {
+  this.pizzas = [];
   this.currentId = 0
 }
 
-AddressBook.prototype.addContact = function(contact) {
+AddressBook.prototype.addPizza = function(contact) {
   contact.id = this.assignId();
   this.contacts.push(contact);
 }
@@ -14,42 +14,43 @@ AddressBook.prototype.assignId = function() {
   return this.currentId;
 }
 
-AddressBook.prototype.findContact = function(id) {
-  for (let i=0; i< this.contacts.length; i++) {
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        return this.contacts[i];
-      }
-    }
-  };
-  return false;
-}
+// AddressBook.prototype.findContact = function(id) {
+//   for (let i=0; i< this.contacts.length; i++) {
+//     if (this.contacts[i]) {
+//       if (this.contacts[i].id == id) {
+//         return this.contacts[i];
+//       }
+//     }
+//   };
+//   return false;
+// }
 
-AddressBook.prototype.deleteContact = function(id) {
-  for (let i=0; i< this.contacts.length; i++) {
-    if (this.contacts[i]) {
-      if (this.contacts[i].id == id) {
-        delete this.contacts[i];
-        return true;
-      }
-    }
-  };
-  return false;
-}
+// AddressBook.prototype.deleteContact = function(id) {
+//   for (let i=0; i< this.contacts.length; i++) {
+//     if (this.contacts[i]) {
+//       if (this.contacts[i].id == id) {
+//         delete this.contacts[i];
+//         return true;
+//       }
+//     }
+//   };
+//   return false;
+// }
 
 // Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber, email, location) {
-  this.firstName = firstName,
-  this.lastName = lastName,
-  this.phoneNumber = phoneNumber;
-  this.email = email;
-  this.location = [];
+function Pizza(size, top1, top2, top3, top4, price) {
+  this.top1 = top1,
+  this.top2 = top2,
+  this.top3 = top3;
+  this.top4 = top4;
+  this.price = price;
 }
+let toppings = [1, 2, 3, 4];
+function priceCalculator(toppings) {
+  let totalPrice = toppings[0] + toppings[1] + toppings[2] + toppings [3];
+  console.log(totalPrice);
+  }
 
-
-Contact.prototype.fullName = function() {
-  return this.firstName + " " + this.lastName;
-}
 
 // Bussiness Logic for Places ---------
 function Place() {
