@@ -51,6 +51,7 @@ function pricer(item,item2) {
         price += 6;
     }
     console.log(price)
+    return price;
 }
 let pizzaOrder = new Order();
 // pizza cost
@@ -68,9 +69,8 @@ $(document).ready(function() {
     const size = $("#size").val();
     const top1 = $("#top1Choice").val();
     let newPizza = new Pizza (size, top1);
-
     pizzaOrder.addPizza(newPizza);
-    $(".totalPrice") = pricer(size, top1);
+    $(".total").text(pricer(size, top1));
 
     $(".pizzaSize").text(newPizza.size);
     $(".pizzaTop1").text(newPizza.top1);
