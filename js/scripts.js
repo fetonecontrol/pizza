@@ -1,38 +1,61 @@
-// Business Logic for Pizzas ---------
-// function Pizza(size, top1, top2, top3, top4) {
-//   this.size = size
-//   this.top1 = top1,
-//   this.top2 = top2,
-//   this.top3 = top3;
-//   this.top4 = top4;
+// Business Logic for Pizza Order ---------
+function Order() {
+  this.pizzaOrder = [];
+  this.currentId = 0
+}
 
-// }
-// Pizza.prototype.dressPizza = function(pizza){
-//   let toppings = [pepperoni, mushroom, pineApple, squirellJerkyr];
+Order.prototype.addPizza = function(pizza) {
+  pizza.id = this.assignId();
+  this.pizzaOrder.push(pizza);
+}
 
-// }
+Order.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+}
 
-// let toppings = [1, 2, 3, 4];
-// function priceCalculator(toppings) {
-//   let totalPrice = size + toppings[0] + toppings[1] + toppings[2] + toppings [3];
-//   console.log(totalPrice);
-//   }
+Order.prototype.findPizza = function(id) {
+  for (let i=0; i< this.pizzaOrder.length; i++) {
+    if (this.pizzaOrder[i]) {
+      if (this.pizzaOrder[i].id == id) {
+        return this.pizzaOrder[i];
+      }
+    }
+  };
+  return false;
+}
+// Bussiness Logci for Pizzas
 
-// User Interface Logic ---------
 
-//Begin Display Contact
+function Pizza(size, top1,) {
+  this.size = size;
+  this.top1 = top1;
+}
+function pricer(selection){
+  if (selection.includes("14inches")){
+    console.log("working");
+  }
+}
+let pizzaOrder = new Order();
+// pizza cost
 
+// Display Selection
+function displayOrder(pizzaId){
+  const pizza = pizzaOrder.findPizza(pizzaId);
+  $(".pizzaSize").html(pizza.size);
+  $(".pizzaTop1").html(pizza.top1);
+}
 // Begin User Input
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
     const size = $("#size").val();
-    // allToppings = size;
-    console.log(size);
-    //let newPizza = new Pizza(size);
-    // locations.addPlace(newPlaces);
-    //pizzaOrder.addPizza(newPizza);
-    //console.log(addressBook.contacts);
-    //displayContactDetails(pizzaOrder); 
+    const top1 = $("#top1Choice").val();
+    let newPizza = new Pizza (size, top1);
+    pizzaOrder.addPizza(newPizza);
+    displayOrder(pizzaOrder);
+    $(".pizzaSize").text(newPizza.size);
+    $(".top1").text(newPizza.top1);
+    console.log(newPizza);
   })
 })
