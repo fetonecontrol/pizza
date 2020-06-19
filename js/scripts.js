@@ -37,30 +37,27 @@ function Pizza(size, top1,) {
 
 Pizza.prototype.pricer = function() {
   price = 0;
-    if (this.top1 == "14inch") {
+    if (this.size.includes("14")) {
         price += 12;
+    } else if (this.size.includes("18")){
+        price += 15;
+    } else if (this.size.includes("24")){
+        price += 20;
+    } 
+    if (this.top1.includes("Fresh")){
+        price += 1;
+    } else if (this.top1.includes("Cal")){
+        price += 2;
+    } else if (this.top1.includes("Pep")){
+        price += 2;
+    } else if (this.top1.includes("Squ")){
+        price += 6;
     }
     
     console.log(price)
     return price;
 }
 
- //  else if (pricerArray.top1.includes("18")){
-    //     price += 15;
-    // } else if (item.includes("24")){
-    //     price += 20;
-    // } 
-    // if (item2.includes("Fresh")){
-    //     price += 1;
-    // } else if (item2.includes("Cal")){
-    //     price += 2;
-    // } else if (item2.includes("Pep")){
-    //     price += 2;
-    // } else if (item2.includes("Squ")){
-    //     price += 6;
-    // }
-
-// Display Selection
 // Begin User Input
 $(document).ready(function() {
   $("form#new-pizza").submit(function(event) {
@@ -70,11 +67,12 @@ $(document).ready(function() {
     let newPizza = new Pizza (size, top1);
     pizzaOrder.addPizza(newPizza);
     //$(".total").text(pricer(size, top1));
-    newPizza.pricer();
-    
+    let price = newPizza.pricer();
+    $(".total").html("Your total is:" + " " + "$" + price);
     $(".pizzaSize").html(newPizza.size);
     $(".pizzaTop1").html(newPizza.top1);
     $(".top1").html(newPizza.top1);
-    console.log(newPizza);
+    
+    console.log(price);
   })
 })
