@@ -33,9 +33,22 @@ function Pizza(size, top1,) {
 }
 
 function pricer(item) {
+  price = 0;
   if (item.includes("14")) {
-      alert("success");
-  } 
+      price += 12;
+  } else if (item.includes("18")){
+      price += 15;
+  } else if (item.includes("24")){
+      price += 20;
+  } else if (item.includes("Fresh")){
+      price += 1;
+  } else if (item.includes("Cal")){
+      price += 2;
+  } else if (item.includes("Pep")){
+      price += 2;
+  } else if (item.includes("Squ")){
+      price += 6;
+  }
 }
 let pizzaOrder = new Order();
 // pizza cost
@@ -52,11 +65,12 @@ $(document).ready(function() {
     event.preventDefault();
     const size = $("#size").val();
     const top1 = $("#top1Choice").val();
+    let totalPrice = [size, top1];
     let newPizza = new Pizza (size, top1);
 
     pizzaOrder.addPizza(newPizza);
-
     pricer(size);
+    alert(totalPrice);
 
 
     $(".pizzaSize").text(newPizza.size);
