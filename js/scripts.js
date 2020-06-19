@@ -75,7 +75,6 @@ Pizza.prototype.pricer = function() {
 } else if (this.top3.includes("Squ")){
     price += 6;
 }
-    console.log(price)
     return price;
 }
 
@@ -97,6 +96,5 @@ $(document).ready(function() {
     $(".top1").html(newPizza.top1);
     $(".top2").html(newPizza.top2);
     $(".top3").html(newPizza.top3);
-    console.log(price);
   })
 })
