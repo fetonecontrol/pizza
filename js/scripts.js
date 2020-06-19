@@ -31,10 +31,11 @@ function Pizza(size, top1,) {
   this.size = size;
   this.top1 = top1;
 }
-function pricer(selection){
-  if (selection.includes("14inches")){
-    console.log("working");
-  }
+
+function pricer(item) {
+  if (item.includes("14")) {
+      alert("success");
+  } 
 }
 let pizzaOrder = new Order();
 // pizza cost
@@ -52,9 +53,14 @@ $(document).ready(function() {
     const size = $("#size").val();
     const top1 = $("#top1Choice").val();
     let newPizza = new Pizza (size, top1);
+
     pizzaOrder.addPizza(newPizza);
-    displayOrder(pizzaOrder);
+
+    pricer(size);
+
+
     $(".pizzaSize").text(newPizza.size);
+    $(".pizzaTop1").text(newPizza.top1);
     $(".top1").text(newPizza.top1);
     console.log(newPizza);
   })
