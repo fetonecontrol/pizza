@@ -23,13 +23,13 @@ _{Output: Total price is $14.00}_
 
 ## Setup/Installation Requirements
 
-* _Navigate your broswer to https://github.com/fetonecontrol/address-book
+* _Navigate your broswer to https://github.com/fetonecontrol/pizza
 * _Download the folder from this repository, and double click on the index.html file to open it in your Browser_
 
 _OR_
 
 * _Navigate in your console to your prefered installation directory_
-* _Use the command git clone https://github.com/fetonecontrol/address-book
+* _Use the command git clone https://github.com/fetonecontrol/pizza
 * _Open any of the files in the directory in your prefered text editor for viewing/editing_
 * _Open the index.html file in your preffered browser or text editor preview function_
 
@@ -39,7 +39,7 @@ _{No known bugs}_
 
 ## Support and contact details
 
-_{Contact Jason Khan <duverseaujohnny21@gmail.com> Frederick Ernest <frederick.ernest@gmail.com>}_
+_{Contact Frederick Ernest <frederick.ernest@gmail.com>}_
 
 ## Technologies Used
 

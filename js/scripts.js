@@ -56,27 +56,27 @@ Pizza.prototype.pricer = function() {
         price += 6;
     }
 //Top2 conditions   
-    if (this.top2.includes("Fresh")){
-      price += 1;
-  } else if (this.top2.includes("Cal")){
-      price += 2;
-  } else if (this.top2.includes("Pep")){
-      price += 2;
-  } else if (this.top2.includes("Squ")){
-      price += 6;
-  }
+      if (this.top2.includes("Fresh")){
+        price += 1;
+    } else if (this.top2.includes("Cal")){
+        price += 2;
+    } else if (this.top2.includes("Pep")){
+        price += 2;
+    } else if (this.top2.includes("Squ")){
+        price += 6;
+    }
 //Top3 conditions   
-  if (this.top3.includes("Fresh")){
-    price += 1;
-} else if (this.top3.includes("Cal")){
-    price += 2;
-} else if (this.top3.includes("Pep")){
-    price += 2;
-} else if (this.top3.includes("Squ")){
-    price += 6;
-}
-    return price;
-}
+      if (this.top3.includes("Fresh")){
+      price += 1;
+    } else if (this.top3.includes("Cal")){
+      price += 2;
+    } else if (this.top3.includes("Pep")){
+      price += 2;
+    } else if (this.top3.includes("Squ")){
+      price += 6;
+    }
+      return price;
+    }
 
 // Begin User Input
 $(document).ready(function() {
